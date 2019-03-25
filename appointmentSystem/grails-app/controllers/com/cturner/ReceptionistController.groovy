@@ -2,5 +2,5 @@ package com.cturner
 
 class ReceptionistController {
 
-    def index() { }
+    def scaffold = Receptionist
 }

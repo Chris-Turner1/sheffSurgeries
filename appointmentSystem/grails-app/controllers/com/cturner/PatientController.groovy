@@ -2,5 +2,5 @@ package com.cturner
 
 class PatientController {
 
-    def index() { }
+    def scaffold = Patient
 }

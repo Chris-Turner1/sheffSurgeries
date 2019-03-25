@@ -2,5 +2,5 @@ package com.cturner
 
 class NurseController {
 
-    def index() { }
+    def scaffold = Nurse
 }
