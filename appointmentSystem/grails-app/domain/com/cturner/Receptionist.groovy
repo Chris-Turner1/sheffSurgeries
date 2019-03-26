@@ -2,20 +2,22 @@ package com.cturner
 
 class Receptionist {
 
-String recepName
-String recepEmail
-String recepUsername
-String recepPassword
-String recepPhone
+    String recepFullName
+    String recepEmail
+    String recepUsername
+    String recepPassword
+    String recepPhone
 
+    static hasMany=[surgerys:Surgery]
+    static belongsTo=[Surgery]
 
     static constraints = 
 
 {
 
       
-      recepName      nullable:false, blank:false;
-      recepEmail     nullable:false, blank:false;
+      recepFullName  nullable:false, blank:false;
+      recepEmail     nullable:false, blank:false, email:true, unique:true;
       recepUsername  nullable:false, blank:false, unique:true;
       recepPassword  nullable:false, blank:false;
       recepPhone     nullable:false, blank:false;
