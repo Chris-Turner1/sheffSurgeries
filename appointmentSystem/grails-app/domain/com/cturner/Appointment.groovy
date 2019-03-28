@@ -4,7 +4,7 @@ class Appointment {
 
 
      Date   appDate
-     Float  appTime
+     String appTime
      String appDuration
      String roomNumber
 
@@ -14,7 +14,7 @@ class Appointment {
     static constraints = 
       {
       appDate      nullable:false, blank:false;
-      appTime      nullable:false, blank:false, scale:2, min:8.30F, max:18.00F;
+      appTime      nullable:false, blank:false, scale:2;
       appDuration  nullable:false, blank:false, inList:["30", "45", "60"];
       roomNumber   nullable:false, blank:false, size:4..6;
 

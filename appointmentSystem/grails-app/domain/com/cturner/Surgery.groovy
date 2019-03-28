@@ -8,7 +8,7 @@ class Surgery {
     String telephone
     int    numberOfPatients
     String description
-    Float openingTime
+    String openingTime
 
 
    static hasMany=[doctors:Doctor, receptionists:Receptionist, nurses:Nurse, patients:Patient, appointments: Appointment] 
@@ -26,7 +26,7 @@ class Surgery {
       telephone        nullable:false, blank:false, unique:true;
       numberOfPatients nullable:false, blank:false, min:1, max:50;
       description      nullable:false, blank:false, maxSize:5000, widget:'textarea';
-      openingTime      nullable:false, blank:false, scale:2, min:7.00F, max:11.00F;
+      openingTime      nullable:false, blank:false, scale:2;
 
 
     }
