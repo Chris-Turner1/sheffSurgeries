@@ -8,7 +8,7 @@ class Prescription {
      BigDecimal  totalCost
      Date        dateIssued
      Boolean     patientPaying
-     int         medicationSupply
+     int         daysSupplyOfMedication
 
      static hasMany=[surgerys:Surgery, doctors:Doctor]
      static belongsTo=[Surgery, Doctor]
@@ -19,13 +19,13 @@ class Prescription {
 {
 
       
-      pharmacyFullName  nullable:false, blank:false;
-      prescripNumber    nullable:false, blank:false;
-      medicine          nullable:false, blank:false;
-      totalCost         nullable:false, blank:false;
-      dateIssued        nullable:false, blank:false;
-      patientPaying     nullable:false, blank:false, scale:2;
-      medicationSupply  nullable:false, blank:false;
+      pharmacyFullName        nullable:false, blank:false;
+      prescripNumber          nullable:false, blank:false;
+      medicine                nullable:false, blank:false;
+      totalCost               nullable:false, blank:false, scale:2;
+      dateIssued              nullable:false, blank:false;
+      patientPaying           nullable:false, blank:false;
+      daysSupplyOfMedication  nullable:false, blank:false;
 
     }
 

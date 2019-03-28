@@ -23,10 +23,10 @@ class Surgery {
       surgeryName      nullable:false, blank:false;
       address          nullable:false, blank:false;
       postcode         nullable:false, blank:false;
-      telephone        nullable:false, blank:false;
+      telephone        nullable:false, blank:false, unique:true;
       numberOfPatients nullable:false, blank:false, min:1, max:50;
-      description      nullable:false, blank:false, maxSize:5000, widget:'textarea'
-      openingTime      nullable:false, blank:false, scale:2, min:9.00F, max:19.00F;
+      description      nullable:false, blank:false, maxSize:5000, widget:'textarea';
+      openingTime      nullable:false, blank:false, scale:2, min:7.00F, max:11.00F;
 
 
     }
