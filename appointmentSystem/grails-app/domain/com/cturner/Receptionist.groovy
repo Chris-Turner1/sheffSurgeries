@@ -11,6 +11,11 @@ class Receptionist {
     static hasMany=[surgerys:Surgery]
     static belongsTo=[Surgery]
 
+    String toString(){
+    return recepFullName  
+}
+
+
     static constraints = 
 
 {

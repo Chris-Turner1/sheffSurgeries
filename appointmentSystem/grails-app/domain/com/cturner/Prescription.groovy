@@ -13,6 +13,10 @@ class Prescription {
      static hasMany=[surgerys:Surgery, doctors:Doctor]
      static belongsTo=[Surgery, Doctor]
 
+     String toString(){
+     return prescripNumber
+}
+
 
     static constraints = 
 
