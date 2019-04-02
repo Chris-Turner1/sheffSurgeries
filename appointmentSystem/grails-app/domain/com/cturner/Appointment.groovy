@@ -11,6 +11,11 @@ class Appointment {
      static hasMany=[surgerys:Surgery, doctors:Doctor]
      static belongsTo=[Doctor, Surgery]
 
+  String toString(){
+  return appDate
+}
+
+
     static constraints = 
       {
       appDate      nullable:false, blank:false;

@@ -6,7 +6,7 @@ def init = { servletContext ->
 
     def surgery1 = new Surgery ( 
     surgeryName: 'Northern General Hospital',
-    address: 'Herries Rd',
+    address: 'Herries Rd, Sheffield',
     postcode: 'S5 7AU',
     telephone: '0114 243 4343',
     numberOfPatients: 45,
@@ -15,7 +15,7 @@ def init = { servletContext ->
 
     def surgery2 = new Surgery ( 
     surgeryName: 'Royal Hallamshire Hospital',
-    address: 'Glossop Rd Sheffield',
+    address: 'Glossop Rd, Sheffield',
     postcode: 'S10 2JF',
     telephone: '0114 271 1900',
     numberOfPatients: 48,
@@ -91,15 +91,15 @@ def init = { servletContext ->
     nursePhone: '07974803222').save()
 
     def appointment1 = new Appointment ( 
-    appDate: '25/03/2019',     
+    appDate: new Date('25/03/2019'),     
     appTime: '9:00',      
-    appDuration: '10',  
+    appDuration: '45',  
     roomNumber: '1500').save()
 
     def appointment2 = new Appointment ( 
-    appDate: '31/03/2019',     
+    appDate: new Date('31/03/2019'),     
     appTime: '16:00',      
-    appDuration: '10',  
+    appDuration: '30',  
     roomNumber: '1111').save()
     
     def prescription1 = new Prescription ( 
@@ -120,26 +120,43 @@ def init = { servletContext ->
     patientPaying: false,            
     daysSupplyOfMedication: 28).save()  
 
-   surgery1.addToReceptionists(receptionist1)
-   patient1.addToPrescriptions(prescription1)
-//   doctor1.addToAppointments(appointment1)
-
-
-
-//   Surgery1.addToReceptionists(receptionist1)
-//   Surgery2.addToReceptionists(receptionist2)
-
+//   surgery1.addToReceptionists(receptionist1)
 //   patient1.addToPrescriptions(prescription1)
-//   patient2.addToPrescriptions(prescription2)
-
-//   doctor1.addToPrescriptions(prescription1)
-//   doctor2.addToPrescriptions(prescription2)
-
 //   doctor1.addToAppointments(appointment1)
-//   doctor2.addToAppointments(appointment2)
 
-//   appointment1.addToSurgerys(surgery1)
-//   appointment2.addToSurgerys(surgery2)
+     surgery1.addToReceptionists(receptionist1)
+     surgery2.addToReceptionists(receptionist2)
+
+     patient1.addToPrescriptions(prescription1)
+     patient2.addToPrescriptions(prescription2)
+
+     doctor1.addToPrescriptions(prescription1)
+     doctor2.addToPrescriptions(prescription2)
+
+     doctor1.addToAppointments(appointment1)
+     doctor2.addToAppointments(appointment2)
+
+     doctor1.addToPatients(patient1)
+     doctor2.addToPatients(patient2)
+     
+     doctor1.addToNurses(nurse1)
+     doctor2.addToNurses(nurse2)
+
+     doctor1.addToSurgerys(surgery1)
+     doctor2.addToSurgerys(surgery2)
+
+     patient1.addToDoctors(doctor1)
+     patient2.addToDoctors(doctor2)
+
+     appointment1.addToSurgerys(surgery1)
+     appointment2.addToSurgerys(surgery2)
+
+     nurse1.addToSurgerys(surgery1)
+     nurse2.addToSurgerys(surgery2)
+
+     nurse1.addToDoctors(doctor1)
+     nurse2.addToDoctors(doctor2)
+    
 
     }
 
