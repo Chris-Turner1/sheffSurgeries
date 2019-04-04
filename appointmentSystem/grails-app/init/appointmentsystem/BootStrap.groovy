@@ -120,12 +120,17 @@ def init = { servletContext ->
     patientPaying: false,            
     daysSupplyOfMedication: 28).save()  
 
-//   surgery1.addToReceptionists(receptionist1)
-//   patient1.addToPrescriptions(prescription1)
-//   doctor1.addToAppointments(appointment1)
-
      surgery1.addToReceptionists(receptionist1)
      surgery2.addToReceptionists(receptionist2)
+
+     prescription1.addToSurgerys(surgery1)
+     prescription2.addToSurgerys(surgery2)
+
+     surgery1.addToPatients(patient1)
+     surgery2.addToPatients(patient2)
+
+     patient1.addToSurgerys(surgery1)
+     patient2.addToSurgerys(surgery2)
 
      patient1.addToPrescriptions(prescription1)
      patient2.addToPrescriptions(prescription2)
