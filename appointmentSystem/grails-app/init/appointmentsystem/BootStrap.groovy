@@ -22,6 +22,15 @@ def init = { servletContext ->
     description: 'Lorem Ipsum',
     openingTime: '24hrs').save()
 
+    def surgery3 = new Surgery ( 
+    surgeryName: 'City Health Centre',
+    address: '21 Marble Street, Sheffield',
+    postcode: 'S11 5TY',
+    telephone: '0114 555 555',
+    numberOfPatients: 30,
+    description: 'Lorem Ipsum',
+    openingTime: '09:00-17:00hrs').save()
+
     def doctor1 = new Doctor ( 
     doctorFullName: 'Tonderai Maswera',
     qualification: 'MBBS',
@@ -44,6 +53,17 @@ def init = { servletContext ->
     doctorPhone:'0114 432 7777',
     bio:'Lorem Ipsum').save()
 
+    def doctor3 = new Doctor ( 
+    doctorFullName: 'Sarah Macdonald',
+    qualification: 'MB',
+    position: 'GP',	
+    doctorEmail: 's.macdonald@cityhealthcentre.gmail.com',
+    doctorUsername: 'Sarah',
+    doctorPassword: 'secret222',
+    doctorOffice:'7522',
+    doctorPhone:'0114 111 7387',
+    bio:'Lorem Ipsum').save()
+
     def patient1 = new Patient ( 
     patientFullName: 'Chris Turner',     
     patientAddress: '53 Holland Rd, S2 4UT',      
@@ -61,6 +81,15 @@ def init = { servletContext ->
     patientID: 11958,          
     dateRegistered: new Date('25/10/2015'),      
     patientPhone: '07426482306').save()
+    
+    def patient3 = new Patient ( 
+    patientFullName: 'Tom Hanks',     
+    patientAddress: '11 Eskdale Rd, S6 1ST',      
+    patientResidence: 'Sheffield',    
+    patientDob: new Date('09/07/1956'),          
+    patientID: 33958,          
+    dateRegistered: new Date('22/03/2010'),      
+    patientPhone: '07426482000').save()
 
     def receptionist1 = new Receptionist ( 
     recepFullName: 'Margaret Thompson',  
@@ -76,6 +105,13 @@ def init = { servletContext ->
     recepPassword: 'receptionist123',  
     recepPhone: '0114 225 2138' ).save()
 
+    def receptionist3 = new Receptionist ( 
+    recepFullName: 'Daniel Foster',  
+    recepEmail: 'd.receptionist@cityhealthcentre.gmail.com',     
+    recepUsername: 'Daniel', 
+    recepPassword: 'receptionist123',  
+    recepPhone: '0114 225 2199' ).save()
+
     def nurse1 = new Nurse ( 
     nurseFullName: 'Zayne Zameer',  
     qualifications: 'BSC (HONOURS) General Nursing', 
@@ -90,6 +126,13 @@ def init = { servletContext ->
     nurseOffice: '10002',    
     nursePhone: '07974803222').save()
 
+    def nurse3 = new Nurse ( 
+    nurseFullName: 'Peter Parker',  
+    qualifications: 'BSC (HONOURS) General Nursing', 
+    nurseEmail: 'p.p.generalnursing@gmail.com',     
+    nurseOffice: '10009',    
+    nursePhone: '07974803777').save()
+
     def appointment1 = new Appointment ( 
     appDate: new Date('25/03/2019'),     
     appTime: '9:00',      
@@ -101,6 +144,12 @@ def init = { servletContext ->
     appTime: '16:00',      
     appDuration: '30',  
     roomNumber: '1111').save()
+
+    def appointment3 = new Appointment ( 
+    appDate: new Date('04/04/2019'),     
+    appTime: '15:00',      
+    appDuration: '60',  
+    roomNumber: '3355').save()
     
     def prescription1 = new Prescription ( 
     pharmacyFullName: 'Boots Pharmacy',         
@@ -120,47 +169,70 @@ def init = { servletContext ->
     patientPaying: false,            
     daysSupplyOfMedication: 28).save()  
 
+    def prescription3 = new Prescription (
+    pharmacyFullName: 'lalaland Pharmacy',         
+    prescripNumber: '381 000 2222',           
+    medicine: 'Painkiller',                 
+    totalCost: '8.50',                
+    dateIssued: new Date('04/04/2019'),              
+    patientPaying: false,            
+    daysSupplyOfMedication: 28).save() 
+
      surgery1.addToReceptionists(receptionist1)
      surgery2.addToReceptionists(receptionist2)
+     surgery3.addToReceptionists(receptionist3)
 
      prescription1.addToSurgerys(surgery1)
      prescription2.addToSurgerys(surgery2)
+     prescription3.addToSurgerys(surgery3)
 
      surgery1.addToPatients(patient1)
      surgery2.addToPatients(patient2)
+     surgery3.addToPatients(patient3)
 
      patient1.addToSurgerys(surgery1)
      patient2.addToSurgerys(surgery2)
+     patient3.addToSurgerys(surgery3)
 
      patient1.addToPrescriptions(prescription1)
      patient2.addToPrescriptions(prescription2)
+     patient3.addToPrescriptions(prescription3)
 
      doctor1.addToPrescriptions(prescription1)
      doctor2.addToPrescriptions(prescription2)
+     doctor3.addToPrescriptions(prescription3)
 
      doctor1.addToAppointments(appointment1)
      doctor2.addToAppointments(appointment2)
+     doctor3.addToAppointments(appointment3)
 
      doctor1.addToPatients(patient1)
      doctor2.addToPatients(patient2)
+     doctor3.addToPatients(patient3)
      
      doctor1.addToNurses(nurse1)
      doctor2.addToNurses(nurse2)
+     doctor3.addToNurses(nurse3)
 
      doctor1.addToSurgerys(surgery1)
      doctor2.addToSurgerys(surgery2)
+     doctor3.addToSurgerys(surgery3)
 
      patient1.addToDoctors(doctor1)
      patient2.addToDoctors(doctor2)
+     patient3.addToDoctors(doctor3)
 
      appointment1.addToSurgerys(surgery1)
      appointment2.addToSurgerys(surgery2)
+     appointment3.addToSurgerys(surgery3)
 
      nurse1.addToSurgerys(surgery1)
      nurse2.addToSurgerys(surgery2)
+     nurse3.addToSurgerys(surgery3)
 
      nurse1.addToDoctors(doctor1)
      nurse2.addToDoctors(doctor2)
+     nurse3.addToDoctors(doctor3)
     
 
     }
