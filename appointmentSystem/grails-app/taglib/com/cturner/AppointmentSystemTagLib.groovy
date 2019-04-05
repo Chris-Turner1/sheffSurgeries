@@ -16,7 +16,7 @@ def loginToggle = {
 
 	out << "</span><span style='float:right;margin-right:15px'>"
 
-	out << "<a href='${createLink(controller:'receptionist', action:'logout')}'>"
+	out << "<a href='${createLink(controller:'receptionist', 'doctor', action:'logout')}'>"
 
 	out << "Logout </a></span>"
 }
@@ -25,7 +25,7 @@ else {
 
 	out << "<span style='float:right;margin-right:10px'>"
 
-	out << "<a href='${createLink(controller:'receptionist',action:'login')}'>"
+	out << "<a href='${createLink(controller:'receptionist', 'doctor', action:'login')}'>"
 
 	out << "Login </a></span>"
 
