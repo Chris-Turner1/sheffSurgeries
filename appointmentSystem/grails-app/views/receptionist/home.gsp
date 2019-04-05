@@ -7,10 +7,6 @@
 </head>
 <body>
 
-<div id="content" role="main">
-    <section class="row colset-2-its">
-        <h1>Sheffied Surgeries</h1>
-
    <div id="content" role="main">
 
 

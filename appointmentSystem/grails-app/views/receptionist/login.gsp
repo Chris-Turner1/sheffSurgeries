@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>Welcome to Sheffield Surgeries | Home page </title>
+    <title> Receptionist Login | Home page </title>
 </head>
 <body>
 

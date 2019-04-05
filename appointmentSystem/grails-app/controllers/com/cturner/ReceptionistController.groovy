@@ -13,7 +13,7 @@ def login(){
 def validate(){
 
 
-def user = Lecturer.findByRecepUsername(params.username)
+def user = Receptionist.findByRecepUsername(params.username)
 
 if(user && user.recepPassword == params.password){
 
