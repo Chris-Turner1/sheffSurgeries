@@ -15,6 +15,9 @@
 
     </section>
 </div>
+ 
+</div><g:loginToggle/>
+</div><g:doctorloginToggle/>
 
 </body>
 </html>

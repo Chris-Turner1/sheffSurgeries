@@ -51,7 +51,7 @@
        <h3>Appointment List</h3> 
        <p>lorem ipsum test test test</p>
        <button type="button" class="btn btn-success">
-       <g:link controller="receptionist" action="index">List Appointment</g:link>
+       <g:link controller="appointment" action="index">List Appointment</g:link>
        </button>
 
 </div>
@@ -59,6 +59,8 @@
 </div> 
 
 </div>
+
+</div><g:doctorloginToggle/>
 
 </body>
 

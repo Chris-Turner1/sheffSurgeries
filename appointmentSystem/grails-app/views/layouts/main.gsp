@@ -22,8 +22,6 @@
 
             <asset:image src="health care banner.jpg"/>
 
-</div><g:loginToggle/>
-
    
 <asset:javascript src="application.js"/>
 

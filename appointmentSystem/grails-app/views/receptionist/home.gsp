@@ -34,7 +34,7 @@
 </div>
 
 
-<div class="third"> 
+<div class="first"> 
 
 
 	<h3> Patient Management</h3> 
@@ -45,7 +45,7 @@
 
 </div>
 
-<div class="forth"> 
+<div class="second"> 
 
      
        <h3>Receptionist Management</h3> 
@@ -54,11 +54,22 @@
        <g:link controller="receptionist" action="create">Add Receptionist</g:link>
        </button>
 
+<div class="first"> 
+
+     
+       <h3>Search</h3> 
+       <p>lorem ipsum test test test</p>
+       <button type="button" class="btn btn-success">
+       <g:link controller="patient" action="search">Search Patient</g:link>
+       </button>
+
 </div>
 
 </div> 
 
 </div>
+
+</div><g:loginToggle/>
 
 </body>
 

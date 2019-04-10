@@ -13,11 +13,11 @@ def login(){
 def validate(){
 
 
-def user = Doctor.findByDoctorUsername(params.username)
+def user2 = Doctor.findByDoctorUsername(params.username)
 
-if(user && user.doctorPassword == params.password){
+if(user2 && user2.doctorPassword == params.password){
 
-session.user = user
+session.user2 = user2
 
 render view:'home'
 
@@ -39,11 +39,12 @@ render view:'login'
 def logout ={
 
 
-session.user = null
+session.user2 = null
 
 redirect(uri:'/')
 
 
 	}
+
 
 }
