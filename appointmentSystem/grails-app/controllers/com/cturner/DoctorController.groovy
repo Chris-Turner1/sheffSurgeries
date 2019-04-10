@@ -13,7 +13,7 @@ def login(){
 def validate(){
 
 
-def user2 = Doctor.findByDoctorUsername(params.username)
+def user2 = Doctor.findByDoctorEmail(params.username)
 
 if(user2 && user2.doctorPassword == params.password){
 
