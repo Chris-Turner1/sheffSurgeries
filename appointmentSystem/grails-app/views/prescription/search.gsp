@@ -10,9 +10,9 @@
       <div class="row">
       <h1>Sheffield Surgeries</h1>
       <formset>
-      <legend>Search for Patients</legend>
+      <legend>Search for Prescription</legend>
       <g:form action="results">
-      <label for="name">Patient Name</label>
+      <label for="name">Medicine Name</label>
       <g:textField name="name"/>
       <g:submitButton name="search" value="Search" />
       </g:form>
@@ -20,3 +20,4 @@
       </div>
 </body>
 </html>
+ 

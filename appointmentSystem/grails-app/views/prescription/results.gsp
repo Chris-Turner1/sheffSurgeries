@@ -8,17 +8,17 @@
 <body>
 
    <div class="row">
-   <h1>Patient Results</h1>
-   <h3>Search Results for Patient</h3>
+   <h1>Medicine Results</h1>
+   <h3>Search Results for Medicine</h3>
   <p>
-   Searched ${totalPatients} records
+   Searched ${totalPrescriptions} records
    for items matching <em>${term}</em>.
-   Found <strong>${patients.size()}</strong> patients.
+   Found <strong>${prescriptions.size()}</strong> prescriptions.
   </p>
   <ul>
-  <g:each var="patient" in="${patients}">
+  <g:each var="prescription" in="${prescriptions}">
   <li><g:link controller="patient" action="show"
-  id="${patient.id}">${patient.patientFullName}</g:link></li>
+  id="${prescription.id}">${prescription.medicine}</g:link></li>
   </g:each>
   </ul>
   <button type="button" class="btn btn-success">
@@ -28,3 +28,5 @@
 </div>
 </body>
 </html>
+
+

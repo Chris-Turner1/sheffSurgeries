@@ -10,6 +10,9 @@
    <div id="content" role="main">
 
 
+</div><g:loginToggle/>
+
+
 <div class ="row">
 
 
@@ -68,8 +71,6 @@
 </div> 
 
 </div>
-
-</div><g:loginToggle/>
 
 </body>
 

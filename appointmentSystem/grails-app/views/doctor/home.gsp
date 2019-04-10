@@ -10,6 +10,9 @@
    <div id="content" role="main">
 
 
+</div><g:doctorloginToggle/>
+
+
 <div class ="row">
 
 
@@ -28,13 +31,13 @@
 	<h3>Prescription List</h3> 
         <p>lorem ipsum test test test</p>
         <button type="button" class="btn btn-success">
-        <g:link controller="nurse" action="index">List Prescription</g:link>
+        <g:link controller="prescription" action="index">List Prescription</g:link>
         </button>
 
 </div>
 
 
-<div class="third"> 
+<div class="first"> 
 
 
 	<h3> Patient List</h3> 
@@ -45,7 +48,7 @@
 
 </div>
 
-<div class="forth"> 
+<div class="second"> 
 
      
        <h3>Appointment List</h3> 
@@ -54,13 +57,21 @@
        <g:link controller="appointment" action="index">List Appointment</g:link>
        </button>
 
+
+<div class="first"> 
+
+     
+       <h3>Search</h3> 
+       <p>lorem ipsum test test test</p>
+       <button type="button" class="btn btn-success">
+       <g:link controller="prescription" action="search">Search Medicine</g:link>
+       </button>
+
 </div>
 
 </div> 
 
 </div>
-
-</div><g:doctorloginToggle/>
 
 </body>
 

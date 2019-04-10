@@ -91,6 +91,24 @@ def init = { servletContext ->
     dateRegistered: new Date('22/03/2010'),      
     patientPhone: '07426482000').save()
 
+    def patient4 = new Patient ( 
+    patientFullName: 'David Gilmour',     
+    patientAddress: '61 Mare St, E8 1HY',      
+    patientResidence: 'Sheffield',    
+    patientDob: new Date('03/06/1946'),          
+    patientID: 717,          
+    dateRegistered: new Date('16/09/2000'),      
+    patientPhone: '07464483085').save()
+
+    def patient5 = new Patient ( 
+    patientFullName: 'Simony Browny',     
+    patientAddress: '86 Queens Rd, S2 4DR',      
+    patientResidence: 'Sheffield',    
+    patientDob: new Date('22/04/1986'),          
+    patientID: 958,          
+    dateRegistered: new Date('22/04/2010'),      
+    patientPhone: '07450482077').save()
+
     def receptionist1 = new Receptionist ( 
     recepFullName: 'Margaret Thompson',  
     recepEmail: 'm.receptionist@northerngeneralhospital.gmail.com',     
@@ -150,6 +168,18 @@ def init = { servletContext ->
     appTime: '15:00',      
     appDuration: '60',  
     roomNumber: '3355').save()
+
+    def appointment4 = new Appointment ( 
+    appDate: new Date('06/04/2019'),     
+    appTime: '14:30',      
+    appDuration: '45',  
+    roomNumber: '1500').save()
+
+    def appointment5 = new Appointment ( 
+    appDate: new Date('08/04/2019'),     
+    appTime: '10:00',      
+    appDuration: '30',  
+    roomNumber: '3355').save()
     
     def prescription1 = new Prescription ( 
     pharmacyFullName: 'Boots Pharmacy',         
@@ -178,6 +208,24 @@ def init = { servletContext ->
     patientPaying: false,            
     daysSupplyOfMedication: 28).save() 
 
+    def prescription4 = new Prescription (
+    pharmacyFullName: 'Asda Pharmacy',         
+    prescripNumber: '378 043 2298',           
+    medicine: 'BENYLIN Cough Medicine',                 
+    totalCost: '8.50',                
+    dateIssued: new Date('06/04/2019'),              
+    patientPaying: true,            
+    daysSupplyOfMedication: 28).save() 
+
+    def prescription5 = new Prescription (
+    pharmacyFullName: 'Tesco Pharmacy',         
+    prescripNumber: '481 100 7222',           
+    medicine: 'Oraldene Mouthwash 1ltr',                 
+    totalCost: '8.50',                
+    dateIssued: new Date('08/04/2019'),              
+    patientPaying: false,            
+    daysSupplyOfMedication: 28).save() 
+
      surgery1.addToReceptionists(receptionist1)
      surgery2.addToReceptionists(receptionist2)
      surgery3.addToReceptionists(receptionist3)
@@ -185,30 +233,44 @@ def init = { servletContext ->
      prescription1.addToSurgerys(surgery1)
      prescription2.addToSurgerys(surgery2)
      prescription3.addToSurgerys(surgery3)
+     prescription4.addToSurgerys(surgery1)
+     prescription5.addToSurgerys(surgery3)
 
      surgery1.addToPatients(patient1)
      surgery2.addToPatients(patient2)
      surgery3.addToPatients(patient3)
+     surgery1.addToPatients(patient4)
+     surgery3.addToPatients(patient5)
 
      patient1.addToSurgerys(surgery1)
      patient2.addToSurgerys(surgery2)
      patient3.addToSurgerys(surgery3)
+     patient4.addToSurgerys(surgery1)
+     patient5.addToSurgerys(surgery3)
 
      patient1.addToPrescriptions(prescription1)
      patient2.addToPrescriptions(prescription2)
      patient3.addToPrescriptions(prescription3)
+     patient4.addToPrescriptions(prescription4)
+     patient5.addToPrescriptions(prescription5)
 
      doctor1.addToPrescriptions(prescription1)
      doctor2.addToPrescriptions(prescription2)
      doctor3.addToPrescriptions(prescription3)
+     doctor1.addToPrescriptions(prescription4)
+     doctor3.addToPrescriptions(prescription5)
 
      doctor1.addToAppointments(appointment1)
      doctor2.addToAppointments(appointment2)
      doctor3.addToAppointments(appointment3)
+     doctor1.addToAppointments(appointment4)
+     doctor3.addToAppointments(appointment5)
 
      doctor1.addToPatients(patient1)
      doctor2.addToPatients(patient2)
      doctor3.addToPatients(patient3)
+     doctor1.addToPatients(patient4)
+     doctor3.addToPatients(patient5)
      
      doctor1.addToNurses(nurse1)
      doctor2.addToNurses(nurse2)
@@ -221,10 +283,14 @@ def init = { servletContext ->
      patient1.addToDoctors(doctor1)
      patient2.addToDoctors(doctor2)
      patient3.addToDoctors(doctor3)
+     patient4.addToDoctors(doctor1)
+     patient5.addToDoctors(doctor3)
 
      appointment1.addToSurgerys(surgery1)
      appointment2.addToSurgerys(surgery2)
      appointment3.addToSurgerys(surgery3)
+     appointment4.addToSurgerys(surgery1)
+     appointment5.addToSurgerys(surgery3)
 
      nurse1.addToSurgerys(surgery1)
      nurse2.addToSurgerys(surgery2)
