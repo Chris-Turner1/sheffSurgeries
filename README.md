@@ -1,2 +1,2 @@
 # sheffSurgeries
-The purpose of this application is enable receptionist and docotor to login and make to adhere to the various surgeries.   
+The purpose of this application is enable receptionist and doctor to login to adhere to the various surgeries requirments outlined in assisngment2.   
