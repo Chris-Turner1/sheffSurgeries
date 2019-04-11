@@ -1,2 +1,2 @@
 # sheffSurgeries
-The purpose of this application is enable receptionist to login and make doctor's appointments at various surgeries. The skills demonstrated will be everything that has been learnt from the grails tutorials   
+The purpose of this application is enable receptionist and docotor to login and make to adhere to the various surgeries.   
